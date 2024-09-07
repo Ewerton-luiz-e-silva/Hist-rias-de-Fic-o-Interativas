@@ -1,0 +1,186 @@
+/* Importa a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Estiliza o corpo da página */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte padrão */
+    background-color: #f5f5f5; /* Cor de fundo clara */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    display: flex; /* Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    min-height: 100vh; /* Garante altura mínima da viewport */
+}
+
+/* Estiliza o cabeçalho */
+header {
+    background-color: #2c3e50; /* Cor de fundo escura */
+    color: #ecf0f1; /* Cor do texto clara */
+    padding: 1rem 2rem; /* Espaçamento interno */
+    text-align: center; /* Alinha o texto ao centro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border-bottom: 3px solid #000; /* Borda inferior escura */
+}
+
+header h1 {
+    margin: 0; /* Remove margem padrão */
+    font-size: 2.5rem; /* Tamanho da fonte */
+}
+
+.Pesquisa {
+    margin-top: 100px; /* Espaçamento superior */
+}
+
+/* Estiliza a seção principal */
+main {
+    flex: 1; /* Faz o main preencher o espaço restante */
+    display: flex; /* Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    padding: 2rem; /* Espaçamento interno */
+}
+
+/* Estiliza o campo de pesquisa e o botão */
+main section {
+    width: 100%; /* Largura total da seção */
+    max-width: 600px; /* Largura máxima da seção */
+    display: flex; /* Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 2rem; /* Espaçamento abaixo da seção */
+}
+
+input[type="text"] {
+    width: 100%; /* Largura total do input */
+    max-width: 100%; /* Largura máxima do input */
+    padding: 0.9rem; /* Espaçamento interno */
+    border: 2px solid transparent; /* Borda invisível */
+    border-bottom: 2px solid #2c3e50; /* Borda inferior escura */
+    border-radius: 0.5rem; /* Borda arredondada */
+    font-size: 1rem; /* Tamanho da fonte */
+    margin-bottom: 1rem; /* Espaçamento abaixo do input */
+}
+
+input[type="text"]:hover {
+    border: 2px solid #2c3e50; /* Borda ao passar o mouse */
+}
+
+button {
+    background-color: #2c3e50; /* Cor de fundo do botão */
+    color: #ecf0f1; /* Cor do texto do botão */
+    border: none; /* Remove borda padrão */
+    padding: 0.8rem 2rem; /* Espaçamento interno */
+    margin-top: 5%; /* Margem superior */
+    border-radius: 0.5rem; /* Borda arredondada */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Indica que é clicável */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+button:hover {
+    background-color: #5c6b7b; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Estiliza a seção de resultados da pesquisa */
+.resultados-pesquisa {
+    width: 100%; /* Largura total da seção */
+    max-width: 600px; /* Largura máxima da seção */
+    background-color: #fff; /* Cor de fundo clara */
+    border: 1px solid #ddd; /* Borda clara */
+    border-radius: 0.5rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.item-resultado {
+    text-align: center; /* Alinha o texto ao centro */
+    margin-bottom: 1rem; /* Espaçamento abaixo de cada item */
+    padding: 1rem; /* Espaçamento interno */
+    border-bottom: 1px solid #ddd; /* Linha divisória */
+}
+
+.item-resultado:last-child {
+    border-bottom: none; /* Remove a linha divisória do último item */
+}
+
+.item-resultado h2 {
+    margin: 0; /* Remove margem padrão */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #2c3e50; /* Cor do texto */
+}
+
+.item-resultado a {
+    color: #2980b9; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.item-resultado a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+.descricao-meta {
+    color: #7f8c8d; /* Cor da descrição */
+}
+
+.item-resultado {
+    margin-bottom: 20px; /* Espaçamento abaixo de cada item */
+}
+
+.imagem-resultado {
+    border-radius: 10%; /* Borda arredondada da imagem */
+    text-align: center; /* Alinha o conteúdo ao centro */
+    width: 300px; /* Largura fixa da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+}
+
+/* Define a animação para a seção de resultados */
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Invisível no início */
+        transform: translateY(-20px); /* Inicia acima */
+    }
+    to {
+        opacity: 1; /* Totalmente visível no final */
+        transform: translateY(0); /* Retorna à posição original */
+    }
+}
+
+/* Aplica a animação à seção de resultados */
+.resultados-pesquisa.animado {
+    animation: slideIn 0.5s ease-out; /* Animação suave com duração de 0.5s */
+}
+
+/* Estiliza o rodapé */
+footer {
+    background-color: #2c3e50; /* Cor de fundo escura */
+    color: #ecf0f1; /* Cor do texto clara */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 0; /* Remove espaçamento interno */
+    font-size: 0.875rem; /* Tamanho da fonte */
+    bottom: 0; /* Alinha ao fundo da página */
+    width: 100%; /* Largura total da página */
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Tamanho da fonte em telas menores */
+    }
+
+    input[type="text"], button {
+        max-width: 100%; /* Largura máxima em telas menores */
+    }
+}
+
+/* Estilos responsivos para telas pequenas */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Tamanho da fonte em telas pequenas */
+    }
+
+    input[type="text"], button {
+        max-width: 100%; /* Largura total em telas pequenas */
+    }
+}
